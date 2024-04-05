@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+<!--Per maggiori informazioni vedi index.html, non mi va di commentare tutto :)-->
 
 <head>
     <!--Metadati-->
@@ -24,25 +25,27 @@
         <div class="container">
             <div class="d-flex flex-wrap justify-content-between">
                 <!--Logo app-->
-                <a href="Dashboard.html" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                <a href="Dashboard.html"
+                    class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                    <!--Icona in alto a sinistra che riporta alla dashboard-->
                     <i class="bi bi-bootstrap-fill" style="font-size:1.5em"></i>
                 </a>
-
+                <!--Titolo-->
                 <h4 class="mb-0">Titolo</h4>
-
-                <!--Menu al click dell'icona profilo-->
+                <!--Menu dropdown al click dell'icona profilo-->
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <i class="bi bi-person-circle" style="font-size:1.5em"></i>
+                        <i class="bi bi-person-circle" style="font-size:1.5em"></i> <!--iCONA DEL PROFILO-->
                     </a>
-
-                    <ul class="dropdown-menu text-smaller">
+                    <!--UL e Li sono elementi di html per i menù a tendina, vengono gestiti da Bootstrap per le classi-->
+                    <ul class="dropdown-menu text-smaller"> <!--Classe dropdown gestita da bootstrap-->
                         <li><a class="dropdown-item" href="#">Impostazioni Profilo</a></li>
+                        <!--item del dropdown gestito da bootstrap-->
                         <li><a class="dropdown-item" href="#">Gestisci conti</a></li>
                         <li><a class="dropdown-item" href="#">Assistenza</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <hr class="dropdown-divider"> <!--Divisore nel dropdown-->
                         </li>
                         <li><a class="dropdown-item" href="#">Scarica App Mobile</a></li>
                         <li><a class="dropdown-item" href="#">Log out</a></li>
@@ -54,49 +57,29 @@
 
     <!--Barra di navigazione-->
     <nav class="navbar navbar-expand-md bg-body-tertiary rounded">
+        <!--elemento nav di html che gestisce le navbar-->
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                  </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Conto 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Conto 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Conto 3</a>
-              </li>
-            </ul>
-          </div>
+            <!--Container fluido grande quanto tutta la pagina-->
+            <div class="navbar-collapse justify-content-center">
+                <!--UL e Li sono elementi di html per i menù a tendina, vengono gestiti da Bootstrap per le classi-->
+                <ul class="navbar-nav">
+                    <!--Gestione navbar attraverso classi nav e item-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a> <!--Link alle pagine-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conto 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conto 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conto 3</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-
-
-    <!--Blackbox inferiore-->
-    <!-- <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
-        </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="#"></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"></li>
-        </ul>
-    </footer> -->
-
+    </nav>
 
 
     <!--JQuery -->
