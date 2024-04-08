@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-            <!--Metadati-->
-            <meta charset="UTF-8">
-            <meta name='description' content='Sito Web per StartupYourLife'>
-            <meta name='language' content='IT'>
-            <meta name='author' content='Davide Simone'>
-            <!--Titolo pagina-->
-            <title>Titolo app - Accedi</title>
-            <!--Icona-->
-            <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-            <!--Icone di bootstrap-->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-            <!--Stile pagina-->
-            <link rel="stylesheet" href="./style.css">
-      </head>
+ 
+<head>
+      <!--Metadati-->
+      <meta charset="UTF-8">
+      <meta name='description' content='Sito Web per StartupYourLife'>
+      <meta name='language' content='IT'>
+      <meta name='author' content='Davide Simone'>
+      <!--Titolo pagina-->
+      <title>Titolo app</title>
+      <!---->
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+      <!--Icone di bootstrap-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <!--Stile pagina-->
+      <link rel="stylesheet" href="./style.css">
+  
+  </head>
+  
+  <body>
+      <!--Header-->
+      <header class="p-2 border-bottom contaner-fluid">
+          <div class="container">
+              <div class="d-flex flex-wrap justify-content-between">
+                  <!--Logo app-->
+                  <a href="Dashboard.html"
+                      class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                      <!--Icona in alto a sinistra che riporta alla dashboard-->
+                      <i class="bi bi-bootstrap-fill" style="font-size:1.5em"></i>
+                  </a>
+                  <!--Titolo-->
+                  <h4 class="mb-0">Titolo</h4>
+                  <!--Menu dropdown al click dell'icona profilo-->
+                  <div class="dropdown text-end">
+                      <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          <i class="bi bi-person-circle" style="font-size:1.5em"></i> <!--iCONA DEL PROFILO-->
+                      </a>
+                      <!--UL e Li sono elementi di html per i menù a tendina, vengono gestiti da Bootstrap per le classi-->
+                      <ul class="dropdown-menu text-smaller"> <!--Classe dropdown gestita da bootstrap-->
+                          <li><a class="dropdown-item" href="#">Impostazioni Profilo</a></li>
+                          <!--item del dropdown gestito da bootstrap-->
+                          <li><a class="dropdown-item" href="#">Gestisci conti</a></li>
+                          <li><a class="dropdown-item" href="#">Assistenza</a></li>
+                          <li>
+                              <hr class="dropdown-divider"> <!--Divisore nel dropdown-->
+                          </li>
+                          <li><a class="dropdown-item" href="#">Scarica App Mobile</a></li>
+                          <li><a class="dropdown-item" href="#">Log out</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </header>
+  
       <body>
        ciao babe pagina in sviluppo
        <i class="bi bi-person-workspace"></i>
