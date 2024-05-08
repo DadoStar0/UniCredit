@@ -15,11 +15,11 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <!--Stile pagina-->
       <link rel="stylesheet" href="./style.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
   
 </head>
 
 <body class="w-50 m-auto mt-5"> <!--Body con larghezza pari al 50% dello schermo, margine alto con valore 5-->
-
     <form class="container d-flex flex-column"> <!--Elemento form che gestisce gli elementi al suo interno come flex in colonna-->
         <h1 class="h3 mb-3 fw-normal">Ricarica Prepagata</h1>
         <select class="form-select mb-3">
@@ -29,10 +29,10 @@
             <option value="3">Prepagata 3 - IBAN 1232123213213</option>
           </select>
         <div class="form-floating mb-3"> 
-            <input type="email" class="form-control">
-            <label for="floatingInput">Importo</label>
+            <input type="number" class="form-control" id="importo">
+            <label for="floatingInput" >Importo</label>
         </div>
-        <a class="btn btn-primary w-100 py-2" type="submit" href="../Dashboard.html">Ricarica</a> 
+        <a class="btn btn-primary w-100 py-2" type="submit" onclick='aggiornaTotale(this)' href="../conto.html">Ricarica</a> 
     </form>
 
 
@@ -41,7 +41,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
+<script src="../script.js"></script>
 </body>
 
 </html>

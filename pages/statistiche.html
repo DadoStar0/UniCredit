@@ -14,7 +14,8 @@
     <!--Icone di bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--Stile pagina-->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
 
 </head>
 
@@ -40,13 +41,29 @@
                     </a>
                     <!--UL e Li sono elementi di html per i menù a tendina, vengono gestiti da Bootstrap per le classi-->
                     <ul class="dropdown-menu text-smaller"> <!--Classe dropdown gestita da bootstrap-->
-                        <li><a class="dropdown-item" href="gestioneprofilo.html">Impostazioni Profilo</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Impostazioni Profilo &raquo;
+                            </a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Cambia immagine di profilo</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Cambia account</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Info account</a>
+                                </li>
+                            </ul>
+                        </li>
                         <!--item del dropdown gestito da bootstrap-->
                         <li><a class="dropdown-item" href="gestioneconti.html">Gestisci conti</a></li>
                         <li><a class="dropdown-item" href="assistenza.html">Assistenza</a></li>
                         <li>
                             <hr class="dropdown-divider"> <!--Divisore nel dropdown-->
                         </li>
+                        <li><a class="dropdown-item" href="appmobile.html">Scarica App Mobile</a></li>
                         <li><a class="dropdown-item" href="../index.html">Log out</a></li>
                     </ul>
                 </div>
