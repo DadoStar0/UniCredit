@@ -8,8 +8,7 @@ file per personalizzazioni future
 .dropdown-menu .dropdown-submenu {
     display: none;
     position: relative;
-    left: 60%;
-    top: -7px;
+    left: 10%;
 }
 
 .dropdown-menu .dropdown-submenu-left {
@@ -19,4 +18,8 @@ file per personalizzazioni future
 
 .dropdown-menu>li:hover>.dropdown-submenu {
     display: block;
+}
+
+p{
+    text-align:justify;
 }
