@@ -7,9 +7,9 @@
     <meta charset="UTF-8">
     <meta name='description' content='Sito Web per StartupYourLife'>
     <meta name='language' content='IT'>
-    <meta name='author' content='Davide Simone Angelo Fucci Samuele Molinini'>
+    <meta name='author' content='Davide Simone Angelo Fucci Mattia Malcangi Antonio Di Bari Antonio Balducci'> <!--Autori della pagina-->
     <!--Titolo pagina-->
-    <title>ClerCard</title>
+    <title>S.A.R.A.</title>
     <!---->
     <link rel="icon" type="image/x-icon" href="./immagini/logounicredit.png">
     <!--Icone di bootstrap-->
@@ -38,7 +38,7 @@
 
                 </a>
                 <!--Titolo-->
-                <h4 class="mb-0">ClerCard</h4>
+                <h4 class="mb-0">S.A.R.A.</h4>
                 <a href="infoProfilo.html" class="d-block link-body-emphasis text-decoration-none"
                     aria-expanded="false">
                     <i class="bi bi-person-circle" style="font-size:1.5em"></i> <!--iCONA DEL PROFILO-->
@@ -82,14 +82,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="card.html">La tua card</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="infocard.html">Informazioni carta</a>
-                    </li>
+                
                     <li class="nav-item">
                         <a class="nav-link" href="listacard.html">Le tue carte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="assistenza.html">Assistenza</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promozioni.html">Promozioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="azioni.html">Azioni</a>
                     </li>
                 </ul>
             </div>
@@ -100,27 +104,27 @@
     <table border="1" class="table" id="tabellaCarte">
         <tr border="1" id="Carta1">
         <td border="1"><h3 id="nCarta">Carta 1</h3></td>
-        <td align="center" border="1"><img src="./immagini/clercard.jpg" width="30%" ></img></td>
+        <td align="center" border="1"><img src="./immagini/Carta.png" width="30%" ></img></td>
         <td border="1" align="center"><a class="btn btn-danger btn-l m-2" onclick="rimuoviCarta()" href="#">elimina carta</a></td>
         </tr>
     </table>
 
     <script>
-        let counterCarte = 1;
+        let counterCarte = 1; //contatore delle carte
         function aggiungiCarta() {
-            counterCarte++;
+            counterCarte++; //incrementa contatore
             let tabella = document.getElementById('tabellaCarte');
-            tabella.innerHTML += '<tr border="1" id="Carta' + counterCarte + '">' +
+            tabella.innerHTML += '<tr border="1" id="Carta' + counterCarte + '">' + //aggiungi elemento nuova carta html
                 '<td border="1"><h3 id="nCarta">Carta ' + counterCarte + '</h3></td>' +
-                '<td align="center" border="1"><img src="./immagini/clercard.jpg" width="30%" ></img></td>' +
+                '<td align="center" border="1"><img src="./immagini/Carta.png" width="30%" ></img></td>' +
                 '<td border="1" align="center"><a class="btn btn-danger btn-l m-2" onclick="rimuoviCarta()" href="#">elimina carta</a></td>' +
                 '</tr>';
         }
 
         function rimuoviCarta() {
-            let carta = document.getElementById('Carta' + counterCarte);
-            counterCarte--;
-            carta.remove();
+            let carta = document.getElementById('Carta' + counterCarte); //prendi elemento carta da HTML
+            counterCarte--; //decrementa contatore
+            carta.remove(); //elimina carta da HTML
         }
     </script>
 
