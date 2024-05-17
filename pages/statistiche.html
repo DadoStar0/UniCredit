@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name='description' content='Sito Web per StartupYourLife'>
     <meta name='language' content='IT'>
-    <meta name='author' content='Davide Simone Angelo Fucci Mattia Malcangi Antonio Di Bari Antonio Balducci'> <!--Autori della pagina-->
+    <meta name='author' content='Davide Simone Angelo Fucci Samuele Molinini'>
     <!--Titolo pagina-->
-    <title>S.A.R.A.</title>
+    <title>ClerCard</title>
     <!---->
     <link rel="icon" type="image/x-icon" href="./immagini/logounicredit.png">
     <!--Icone di bootstrap-->
@@ -37,7 +37,7 @@
 
                 </a>
                 <!--Titolo-->
-                <h4 class="mb-0">S.A.R.A.</h4>
+                <h4 class="mb-0">ClerCard</h4>
                 <a href="infoProfilo.html" class="d-block link-body-emphasis text-decoration-none"
                     aria-expanded="false">
                     <i class="bi bi-person-circle" style="font-size:1.5em"></i> <!--iCONA DEL PROFILO-->
@@ -82,16 +82,13 @@
                         <a class="nav-link" href="card.html">La tua card</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="infocard.html">Informazioni carta</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="listacard.html">Le tue carte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="assistenza.html">Assistenza</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="promozioni.html">Promozioni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="azioni.html">Azioni</a>
                     </li>
                 </ul>
             </div>
@@ -174,20 +171,20 @@
         (() => {
             'use strict'
 
-            // Codice per creare il grafico
+            // Graphs
             const ctx = document.getElementById('myChart')
-
-            const myChart = new Chart(ctx, { //oggetto di tipo chart
+            // eslint-disable-next-line no-unused-vars
+            const myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: [ //ascisse
+                    labels: [
                         'Gennaio',
                         'Febbraio',
                         'Marzo',
                         'Aprile',
                         'Maggio',
                     ],
-                    datasets: [{ //ordinate
+                    datasets: [{
                         data: [
                             1100,
                             1200,
@@ -202,7 +199,6 @@
                         pointBackgroundColor: '#007bff'
                     }]
                 },
-                //opzioni di stile
                 options: {
                     plugins: {
                         legend: {

@@ -7,10 +7,9 @@
     <meta charset="UTF-8">
     <meta name='description' content='Sito Web per StartupYourLife'>
     <meta name='language' content='IT'>
-    <meta name='author' content='Davide Simone Angelo Fucci Mattia Malcangi Antonio Di Bari Antonio Balducci'>
-    <!--Autori della pagina-->
+    <meta name='author' content='Davide Simone Angelo Fucci Samuele Molinini'>
     <!--Titolo pagina-->
-    <title>S.A.R.A.</title>
+    <title>ClerCard</title>
     <!---->
     <link rel="icon" type="image/x-icon" href="./immagini/logounicredit.png">
     <!--Icone di bootstrap-->
@@ -23,7 +22,7 @@
 
 </head>
 
-<body onload="aggiorna()">
+<body>
     <!--Header-->
     <!--Header-->
     <header class="p-2 border-bottom contaner bg-danger">
@@ -37,7 +36,7 @@
 
                 </a>
                 <!--Titolo-->
-                <h4 class="mb-0">S.A.R.A.</h4>
+                <h4 class="mb-0">ClerCard</h4>
                 <a href="infoProfilo.html" class="d-block link-body-emphasis text-decoration-none"
                     aria-expanded="false">
                     <i class="bi bi-person-circle" style="font-size:1.5em"></i> <!--iCONA DEL PROFILO-->
@@ -81,18 +80,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="card.html">La tua card</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="infocard.html">Informazioni carta</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="listacard.html">Le tue carte</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="assistenza.html">Assistenza</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="promozioni.html">Promozioni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="azioni.html">Azioni</a>
                     </li>
                 </ul>
             </div>
@@ -104,6 +99,14 @@
     <main class="d-flex flex-column gap-2">
         <h1 class="text-danger mt-2 align-self-center display-1">Conto Bancario</h1>
         <div class="container-fluid d-flex flex-column justify-content-center" id="containerConti">
+            <div class="border border-danger w-50 h-50 h2 align-self-center p-5" id="conto1">
+                <h3 class="m-2 text-center text-primary"id="titoloConto1">Conto 1 <span id="inUso1">(In uso)</span></h3>
+                <p class="m-2 text-center">€1004,00</p>
+                <div class="d-flex flex-row justify-content-center p-2 gap-4">
+                    <button class="btn btn-primary btn-xl p-3" id=1 onclick="selezionaConto(1);" href="#">Seleziona conto</button>
+                </div>
+
+            </div>
 
         </div>
 
@@ -116,7 +119,42 @@
 
     </main>
 
-    <script src="memorizzaConti.js"></script>
+    <script>
+        let contaConti = 1;
+        let contoSelezionato=1;
+        function aggiungiConto() {
+            contaConti++;
+            let soldi = prompt("Inserire disponibilità iniziale: ");
+            
+            let conto = '<div class="border border-danger w-50 h-50 h2 align-self-center p-5" id="conto'+contaConti+'">' +
+                '<h3 class="m-2 text-center text-secondary" id="titoloConto'+contaConti+'">Conto '+ contaConti +' <span id="inUso'+contaConti+'">(In uso)</span>'+'</h3>' +
+                '<p class="m-2 text-center">€' + soldi + ',00</p>' +
+                '<div class="d-flex flex-row justify-content-center p-2 gap-4">'+
+                '<button class="btn btn-danger btn-xl p-3" id="'+contaConti+'" onclick="rimuoviConto(this.id);" href="#">Elimina conto</button>'+
+                '<button class="btn btn-primary btn-xl p-3" id="'+contaConti+'" onclick="selezionaConto(this.id);" href="#">Seleziona conto</button>'+
+                '</div>'+
+                '</div>';
+            document.getElementById('containerConti').innerHTML += conto
+            document.getElementById('inUso'+contaConti).style.display="none";
+        }
+        function rimuoviConto(nConto) {
+            if(contoSelezionato==nConto) selezionaConto(1);
+            document.getElementById('conto'+nConto).remove();
+            contaConti--;
+        }
+        function selezionaConto(nConto){
+            let selezionato = document.getElementById('titoloConto'+contoSelezionato);
+            let selezionare = document.getElementById('titoloConto'+nConto);
+            selezionato.classList.remove("text-primary");
+            selezionato.classList.add("text-secondary");
+            document.getElementById('inUso'+contoSelezionato).style.display="none";
+            
+            selezionare.classList.remove("text-secondary");
+            selezionare.classList.add("text-primary");
+            document.getElementById('inUso'+nConto).style.display="inline";
+            contoSelezionato=nConto;
+        }
+    </script>
 
     <!--Bootstrap Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
